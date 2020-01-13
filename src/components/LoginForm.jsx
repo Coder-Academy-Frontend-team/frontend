@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form'
-import axios from axios;
+import axios from 'axios';
 
 const LoginForm = (props) => {
   const { register, handleSubmit } = useForm()
