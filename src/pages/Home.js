@@ -20,6 +20,7 @@ const Home = () => {
   
   return (
     <>
+      <p>Home</p>
       {/* <HomeHeroBanner /> */}
       <h1>Latest Reviews</h1>
       <div>
