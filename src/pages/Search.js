@@ -6,7 +6,7 @@ import ReactRouter from './router/ReactRouter'
 class Search extends React.Component {
 
   state = {
-    cafesList = [],
+    cafesList: [],
   }
   
   componentDidMount() {
