@@ -2,6 +2,7 @@ import React from 'react'
 import {render} from 'react-dom'
 
 // React Router Imports
-import ReactRouter from './router/ReactRouter'
+import Router from './router/ReactRouter'
 
-render(<ReactRouter />, document.getElementById('root'))
+
+render(<Router />, document.getElementById('root'))
