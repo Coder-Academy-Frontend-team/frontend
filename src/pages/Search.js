@@ -7,8 +7,6 @@ class Search extends React.Component {
 
   state = {
     cafesList = [],
-    milkSearch = ' ',
-    cafeSearch = ' '
   }
   
   componentDidMount() {
@@ -20,7 +18,7 @@ class Search extends React.Component {
   render() {
     return( 
 // Search form goes here
-
+<h1> Search Page</h1>
     )
   }
 }
