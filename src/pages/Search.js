@@ -16,6 +16,10 @@ const Search = ()  => {
   setCafeSearch(e.target.value)
   }
 
+  const displayResultsList 
+
+  
+
 
   return (
     <div>
