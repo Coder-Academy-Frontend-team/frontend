@@ -1,5 +1,4 @@
 import React from 'react'
-import Search from '../pages/Search';
 import Navbar from '../components/Navbar';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
