@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import LoginForm from '../components/LoginForm';
 
 const Login = () => {
     const [users, setUsers] = useState([]);
@@ -19,8 +20,8 @@ const Login = () => {
 
     return(
         <>
-            {/* <NavBar /> */}
-            {/* <LoginForm /> */}
+            <h1>Login page</h1>
+            <LoginForm />
         </>
     )
 }
