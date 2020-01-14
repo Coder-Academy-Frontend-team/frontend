@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "axios": "^0.19.1",
+    "react-files": "^2.4.8",
     "frontend": "^2.0.0-alpha.4",
     "google-maps-react": "^2.0.2",
     "jwt-decode": "^2.2.0",

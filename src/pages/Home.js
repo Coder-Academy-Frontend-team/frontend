@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import Navbar from '../components/Navbar'
 import HomeHeroBanner from '../components/HomeHeroBanner'
+import Navbar from '../components/Navbar';
 
 const Home = () => {
   const [coffeeShops, setCoffeeShops] = useState([]);
@@ -21,9 +21,7 @@ const Home = () => {
 
   
   return (
-    <>
-        <Navbar />
-        <p>Home</p>
+    <>  
         <HomeHeroBanner />
         <h1>Latest Reviews</h1>
         <div>

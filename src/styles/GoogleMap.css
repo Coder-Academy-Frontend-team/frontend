@@ -4,8 +4,8 @@
   position: absolute;
   top: 0;
   right: 40vh;
-
 }
+
 .GoogleMap::active {
   transform: scale(1.5);
   top: 0;
