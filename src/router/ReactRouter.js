@@ -18,8 +18,7 @@ const Router = () => {
                     <Route path="/" component={Home} exact={true} />
                     <Route path="/login" component={Login} />
                     <Route path="/register" component={Register} />
-                    <Route path="/search" component={Search} />
-                    
+                    <Route path="/search" component={Search} />       
                     <Route component={NotFoundPage} />
                 </Switch>
             </BrowserRouter>
