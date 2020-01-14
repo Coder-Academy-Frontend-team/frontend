@@ -10,7 +10,6 @@ import styles from "./Search.module.css";
 require('dotenv').config();
 
 const googleApiKey = process.env.REACT_APP_GOOGLE_API_KEY;
-console.log(googleApiKey);
 
 
 Geocode.setApiKey(googleApiKey);
