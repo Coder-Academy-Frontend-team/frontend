@@ -9,6 +9,8 @@ import Register from '../pages/Register';
 import Search from '../pages/Search';
 import NotFoundPage from '../pages/NotFound';
 import CoffeeProfile from '../pages/CoffeeProfile';
+import ReviewForm from '../pages/ReviewForm'
+import SignupForm from './../components/SignupForm.js';
 
 
 const Router = () => {
@@ -20,10 +22,10 @@ const Router = () => {
                     <Route path="/" component={Home} exact={true} />
                     <Route path="/login" component={Login} />
                     <Route path="/register" component={Register} />
-                    <Route path="/register" component={Register} />
                     <Route path="/search" component={Search} />
                     <Route path="/coffeeprofile/:id" component={CoffeeProfile} />
-                    
+                    <Route path="/create" component={Register} />
+                    <Route path="/review" component={ReviewForm} />
                     <Route component={NotFoundPage} />
                 </Switch>
             </BrowserRouter>
