@@ -1,0 +1,25 @@
+nav {
+    height: 80px;
+    background: #9F7E69;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.individual-link {
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+    text-decoration: none;
+    color: #D2BBA0;
+    /* color: #F2EFC7; */
+    margin: 8px 36px;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    margin: 8px;
+}

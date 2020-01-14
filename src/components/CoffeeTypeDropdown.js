@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./CoffeeTypeDropdown.module.css";
+import styles from "../styles/CoffeeTypeDropdown.module.css";
 
 // const coffeeType = ["Cappucino", "Latte", "Espresso", "Macchiatto"]
 

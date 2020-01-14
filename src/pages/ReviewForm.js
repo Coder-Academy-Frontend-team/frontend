@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import LoginForm from '../components/LoginForm';
-import { Link } from 'react-router-dom';
+import ReviewFormComponent from '../components/ReviewForm';
 
-const Login = () => {
+const ReviewForm = () => {
     // const [users, setUsers] = useState([]);
 
     // useEffect(() => {
@@ -21,14 +20,12 @@ const Login = () => {
 
     return(
         <>
-            <h1>Login page</h1>
-            <LoginForm />
-            <h4>OR</h4>
-            <Link to="/register">Register</Link>
+            <h1>Add Review</h1>
+            <ReviewFormComponent />
         </>
     )
 }
 
 
 
-export default Login
+export default ReviewForm
