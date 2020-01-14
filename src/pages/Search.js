@@ -61,18 +61,30 @@ const changeCoordinates = (e) => {
 
   const cafesListDisplay = () => {
     let coffeeType = coffeeTypeSearch;
-    if (coffeeType)
-{    axios.get('http://localhost:5550/coffee/' + coffeeType)
+    let cafeName = cafeSearch;
+    console.log(coffeeType)
+    if (coffeeType !== (null || '') ) {    
+      axios.get(process.env.REACT_APP_BACKEND_URL + '/coffee/' + coffeeType)
+          .then((res) => {
+      setCafesList([...res.data])
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  } 
+
+  if (cafeName !== (null || '') ) {
+    axios.get(process.env.REACT_APP_BACKEND_URL + '/cafe/' + cafeName)
     .then((res) => {
       setCafesList([...res.data])
     })
     .catch((err) => {
       console.log(err);
     })
-  }
 
   }
 
+  }
 
   return (
     <div className={styles.container}>
@@ -88,9 +100,7 @@ const changeCoordinates = (e) => {
         />
         <input type="text" placeholder="cafe" defaultValue='' onChange={cafeSearchInput}></input>
         <button type="submit" onClick={cafesListDisplay}>Search</button>
-      
-
-
+  
         <div className={styles.cafeInfo}> 
           {cafesList.map((cafe, i) => {
             // console.log(cafe);
