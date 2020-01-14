@@ -63,7 +63,7 @@ const changeCoordinates = (e) => {
   const cafesListDisplay = () => {
     let coffeeType = coffeeTypeSearch;
     if (coffeeType)
-{    axios.get('http://localhost:5550/coffee/' + coffeeType)
+{    axios.get(process.env.REACT_APP_BACKEND_URL + '/coffee/' + coffeeType)
     .then((res) => {
       setCafesList([...res.data])
     })
