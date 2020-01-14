@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import CafeShowPage from '../components/CafeShowPage'
+
 const CoffeeProfile = () => {
 
   const [reviews, setReview] = useState([]);
@@ -21,7 +23,7 @@ const CoffeeProfile = () => {
   return (
     <div>
       <h1> Coffee Profile </h1>
-
+      <CafeShowPage />
     </div>
   )
 };
