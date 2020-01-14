@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const LoginForm = (props) => {
   const { register, handleSubmit } = useForm()
-  const onSubmit = (data) => {
+  const onSubmit = (data) => { 
     console.log(data);
 
     axios.post("https://coffee-back-end.herokuapp.com/users/login", data).then((response) => {
