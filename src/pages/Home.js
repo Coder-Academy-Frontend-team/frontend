@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import HomeHeroBanner from '../components/HomeHeroBanner'
 import Navbar from '../components/Navbar';
+import ReviewCard from './ReviewCard';
 
 const Home = () => {
   const [coffeeShops, setCoffeeShops] = useState([]);
@@ -25,6 +26,7 @@ const Home = () => {
         <HomeHeroBanner />
         <h1>Latest Reviews</h1>
         <div>
+        <ReviewCard />
             {/* {map and call the components for each one, passing in the review object} */}
         </div>
     </>

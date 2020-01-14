@@ -1,31 +1,38 @@
 import React from 'react'
 import '../styles/Review-card.scss';
 
-/*
-
-function getAllReviews() {
-      return {
-          array.forEach(element => {
-              
-          });
-      }
-  }
-
-  */
 class ReviewCard extends React.Component{
-    
+    state = {
+            data: null
+            }
+
+            async componentDidMount() {
+                const response = await fetch('https://coffee-back-end.herokuapp.com/reviews')
+                const data = await response.json()
+                this.setState({
+                    data
+                })
+            }
+
+
     render() {
-        const { coffeeType, milkType, photo, rating, comment } = this.props
+        const { } = this.state.data
         return(
             <div className="reviewCard">
-                <p>Coffeetype{coffeeType} || milktype{milkType}</p>
-                <p>Rating{rating}</p>
-                <img 
-                src={photo} 
-                className="reviewPhoto" 
-                title=" " 
-                alt=" " />
-                <aside>{comment}</aside>
+                {data? data.map((coffeeType, milkType, photo, rating, comment, index) => {
+                    return(
+                        <div>
+                        <p>Coffeetype{coffeeType} || milktype{milkType}</p>
+                        <p>Rating{rating}</p>
+                        <img 
+                        src={photo} 
+                        className="reviewPhoto" 
+                        title=" " 
+                        alt=" " />
+                        <aside>{comment}</aside>
+                        </div>
+                    )
+                }) : null}
             </div>
         )
     }
