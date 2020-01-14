@@ -1,4 +1,3 @@
-import React from 'react';
 import React, { useState, useEffect } from 'react';
 
 const CoffeeProfile = () => {
@@ -11,7 +10,7 @@ const CoffeeProfile = () => {
       const response = await fetch(REACT_APP_BACKEND_URL);
       const data = await response.json();
 
-      setReviews([
+      setReview([
         ...reviews,
         ...data
       ]);
