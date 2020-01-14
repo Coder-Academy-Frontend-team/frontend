@@ -8,6 +8,7 @@ import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Search from '../pages/Search';
 import NotFoundPage from '../pages/NotFound';
+import SearchBar from '../components/SearchBar';
 
 const Router = () => {
     return(
@@ -22,6 +23,7 @@ const Router = () => {
                     
                     <Route component={NotFoundPage} />
                 </Switch>
+                <SearchBar />
             </BrowserRouter>
         </div>
     )

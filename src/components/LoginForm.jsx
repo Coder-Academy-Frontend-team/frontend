@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const LoginForm = (props) => {
   const { register, handleSubmit } = useForm()
-  const onSubmit = (data) => {
+  const onSubmit = (data) => { 
     console.log(data);
 
     axios.post("https://coffee-back-end.herokuapp.com/login", data).then((response) => {
