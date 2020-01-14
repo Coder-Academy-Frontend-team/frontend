@@ -8,6 +8,7 @@ import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Search from '../pages/Search';
 import NotFoundPage from '../pages/NotFound';
+import CafeShowPage from '../components/CafeShowPage';
 import CoffeeProfile from '../pages/CoffeeProfile';
 import ReviewForm from '../pages/ReviewForm'
 import SignupForm from './../components/SignupForm.js';
@@ -26,6 +27,7 @@ const Router = () => {
                     <Route path="/coffeeprofile/:id" component={CoffeeProfile} />
                     <Route path="/create" component={Register} />
                     <Route path="/review" component={ReviewForm} />
+                    <Route path="/show" component={CafeShowPage} />
                     <Route component={NotFoundPage} />
                 </Switch>
             </BrowserRouter>
