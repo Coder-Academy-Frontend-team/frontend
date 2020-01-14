@@ -40,13 +40,14 @@ class FileUpload extends React.Component {
   filesUpload = () => {
 
     const formData = new FormData()
+
     Object.keys(this.state.files).forEach((key) => {
       const file = this.state.files[key]
       formData.append(key, new Blob([file], { type: file.type }), file.name || 'file')
     })
 
     axios.post(`/files`, formData)
-      .then(response => window.alert(`${this.state.files.length} files uploaded succesfully!`))
+      .then(response => window.alert(`${this.state.files.length} files uploaded successfully!`))
       .catch(err => window.alert('Error uploading files :('))
   };
 
@@ -61,12 +62,12 @@ class FileUpload extends React.Component {
           onChange={this.onFilesChange}
           onError={this.onFilesError}
           multiple
-          maxFiles={10}
+          maxFiles={1}
           maxFileSize={10000000}
           minFileSize={0}
           clickable
         >
-          Drop files here or click to upload
+          Please upload a profile image here
         </Files>
 
         <button onClick={this.filesRemoveAll}>Remove All Files</button>
