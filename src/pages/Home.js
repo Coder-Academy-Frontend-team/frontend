@@ -21,6 +21,7 @@ const Home = () => {
   }, []);
 
   return (
+    <>
         <HomeHeroBanner />
         <h1>Latest Reviews</h1>
         <div>
