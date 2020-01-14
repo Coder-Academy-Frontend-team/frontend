@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400&display=swap');
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Oswald', sans-serif;
+}
+body{
+	overflow-x: hidden;
+}
+
+
+
+
+.header {
+	height: 95vh;
+	background-image: linear-gradient(to bottom, rgba(0, 10, 10, 0.5), rgba(43, 43, 43, 0.9)),
+		url(../assets/Hero.webp);
+	background-size: cover;
+	background-position: top;
+	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.text-box {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	margin: -10vh;
+}
+
+.heading-primary {
+	color: #fff;
+	backface-visibility: hidden;
+
+}
+
+.heading-primary-main {
+	font-family: 'Oswald', sans-serif;
+	display: block;
+	letter-spacing: 15px;
+	font-size: 75px;
+	text-transform: uppercase;
+	animation: moveInLeft 1s ease-out;
+}
+
+.heading-primary-sub {
+	font-family: 'Merriweather', sans-serif;
+	display: block;
+	font-size: 35px;
+	font-weight: 300;
+	color: #fff;
+	letter-spacing: 1px;
+	animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+
+	80% {
+		transform: translateX(10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+@keyframes moveInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(100px);
+	}
+
+	80% {
+		transform: translateX(-10px);
+
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+
+}

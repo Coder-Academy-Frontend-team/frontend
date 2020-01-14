@@ -8,6 +8,9 @@ import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Search from '../pages/Search';
 import NotFoundPage from '../pages/NotFound';
+import ReviewForm from '../pages/ReviewForm'
+
+import SignupForm from './../components/SignupForm.js';
 
 const Router = () => {
     return(
@@ -17,9 +20,9 @@ const Router = () => {
                 <Switch>
                     <Route path="/" component={Home} exact={true} />
                     <Route path="/login" component={Login} />
-                    <Route path="/register" component={Register} />
+                    <Route path="/create" component={Register} />
                     <Route path="/search" component={Search} />
-                    
+                    <Route path="/review" component={ReviewForm} />
                     <Route component={NotFoundPage} />
                 </Switch>
             </BrowserRouter>

@@ -113,7 +113,6 @@ const changeCoordinates = (e) => {
     </div>
 
   )
-
 }
 
 export default Search;
