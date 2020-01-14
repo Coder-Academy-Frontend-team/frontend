@@ -10,11 +10,6 @@ import '../styles/Review-Card.scss';
 //   }
 class Review_Card extends React.Component{
     
-    // getRating() {
-        
-    //     return
-    // }
-    
     render() {
         const { coffeeType, milkType, photo, rating, comment } = this.props
         return(
