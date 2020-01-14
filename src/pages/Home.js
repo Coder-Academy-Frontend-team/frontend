@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import HomeHeroBanner from '../components/HomeHeroBanner'
 
 const Home = () => {
   const [coffeeShops, setCoffeeShops] = useState([]);
@@ -20,8 +21,7 @@ const Home = () => {
   
   return (
     <>
-        <p>Home</p>
-        {/* <HomeHeroBanner /> */}
+        <HomeHeroBanner />
         <h1>Latest Reviews</h1>
         <div>
             {/* {map and call the components for each one, passing in the review object} */}
