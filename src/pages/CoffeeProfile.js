@@ -1,6 +1,3 @@
-import React from 'react';
-
-// HOOKS
 import React, { useState, useEffect } from 'react';
 
 const CoffeeProfile = () => {
@@ -9,11 +6,11 @@ const CoffeeProfile = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const REACT_APP_BACKEND_URL = "enter URL here";
+      const REACT_APP_BACKEND_URL = "https://coffee-back-end.herokuapp.com/cafes";
       const response = await fetch(REACT_APP_BACKEND_URL);
       const data = await response.json();
 
-      setReviews([
+      setReview([
         ...reviews,
         ...data
       ]);

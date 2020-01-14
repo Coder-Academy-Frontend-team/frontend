@@ -31,7 +31,6 @@ const Search = ()  => {
   setCafeSearch(e.target.value)
   }
 
-
   useEffect( () => {
       axios.get(process.env.REACT_APP_BACKEND_URL + '/cafes')
       .then((res) => {
