@@ -4,6 +4,10 @@
 * {
 	margin: 0px;
 	padding: 0px;
+	font-family: 'Oswald', sans-serif;
+}
+body{
+	overflow-x: hidden;
 }
 
 
@@ -15,7 +19,6 @@
 		url(../assets/hero.png);
 	background-size: cover;
 	background-position: top;
-
 	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
@@ -24,6 +27,8 @@
 	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	z-index: 1;
+	margin: -10vh;
 }
 
 .heading-primary {
