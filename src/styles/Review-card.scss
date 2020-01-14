@@ -1,12 +1,20 @@
 .reviewCard{
+    background: rgba(255,255,255,.8);
     height: 250px;
     width: 200px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-evenly;
     border: 1px solid red;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45), 
+            -5px -5px 5px rgba(255, 255, 255, 0.45);
     
     .reviewPhoto{
+        background: url(https://source.unsplash.com/random);
+        background-repeat: no-repeat;
+        background-size: cover;
         height: 100px;
         width: 160px;
         margin: 0 auto;

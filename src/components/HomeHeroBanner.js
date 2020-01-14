@@ -1,5 +1,6 @@
 import React from 'react';
 import "../styles/HomeHeroBanner.css";
+import ReviewCard from './ReviewCard';
 
 const HomeHeroBanner = () => {
 	return (
