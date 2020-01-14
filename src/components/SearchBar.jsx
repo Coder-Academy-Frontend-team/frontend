@@ -16,22 +16,12 @@ class SearchBar extends React.Component {
   
   async searchName() {
 
-    // I need to access the index endpoint (?) and search through the results. 
+    
 
     let response = await axios.get(`https://coffee-back-end.herokuapp.com/cafes/name/${this.state.input}`);
-    // var cafe 
+   
     let cafes = response.data 
-    // .then((response) => {
-    //   cafes = response.data
-    // for ( cafe in cafes )
-    // {
-    //   if (cafe.name === input)
-    //   {
-    //     return cafe 
-    //   }
-    // }
-
-    // need to figure out how to put this in the right thing for search results to use. 
+     
 
      return cafes
 
@@ -67,8 +57,7 @@ class SearchBar extends React.Component {
 
         
       </form>
-      // the input needs to store the input as a variabl and connect to the button somehow 
-      // the button needs an OnClick that calls the searc query function
+      
 
     )
   }
