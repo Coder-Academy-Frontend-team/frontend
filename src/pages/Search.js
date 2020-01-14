@@ -8,7 +8,7 @@ import Geocode from "react-geocode";
 import GoogleMap from "../components/GoogleMap.jsx";
 import styles from "./Search.module.css";
 
-Geocode.setApiKey("AIzaSyDZhZWjTiaOxxl03cW1TmqDqfd3V4wbQVI");
+Geocode.setApiKey(process.env.GOOGLE_API_KEY);
 Geocode.setLanguage("en");
 
 
