@@ -79,7 +79,7 @@ class FileUpload extends React.Component {
                 <li className='files-list-item' key={file.id}>
                   <div className='files-list-item-preview'>
                     {file.preview.type === 'image'
-                      ? <img className='files-list-item-preview-image' src={file.preview.url} alt="profile-image"/>
+                      ? <img className='files-list-item-preview-image' src={file.preview.url} alt="profile"/>
                       : <div className='files-list-item-preview-extension'>{file.extension}</div>}
                   </div>
                   <div className='files-list-item-content'>
