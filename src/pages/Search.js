@@ -15,8 +15,7 @@ const Search = ()  => {
     // console.log(e.target.value);
   setCafeSearch(e.target.value)
   }
-
-
+  
   return (
     <div>
       <div>

@@ -9,6 +9,7 @@ import Register from '../pages/Register';
 import Search from '../pages/Search';
 import NotFoundPage from '../pages/NotFound';
 
+
 const Router = () => {
     return(
         <div>
@@ -17,6 +18,7 @@ const Router = () => {
                 <Switch>
                     <Route path="/" component={Home} exact={true} />
                     <Route path="/login" component={Login} />
+                    <Route path="/register" component={Register} />
                     <Route path="/register" component={Register} />
                     <Route path="/search" component={Search} />
                     

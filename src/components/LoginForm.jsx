@@ -7,7 +7,7 @@ const LoginForm = (props) => {
   const onSubmit = (data) => {
     console.log(data);
 
-    axios.post("https://coffee-back-end.herokuapp.com/login", data).then((response) => {
+    axios.post("https://coffee-back-end.herokuapp.com/users/login", data).then((response) => {
       console.log(response.data);
       props.history.push('/');
     });
