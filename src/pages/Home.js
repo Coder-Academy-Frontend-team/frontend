@@ -34,7 +34,7 @@ const Home = () => {
               <p>{review.createdAt}</p>
               <p>{review.rating}</p>
               <p>{review.comment}</p> */}
-              <ReviewCard props={theReview}/>
+              <ReviewCard theReview={theReview}/>
               {/* cafe name, location, username */}
             </div>
           )

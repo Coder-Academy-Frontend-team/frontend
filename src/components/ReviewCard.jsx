@@ -5,13 +5,14 @@ import { Link } from 'react-router-dom';
 class ReviewCard extends React.Component{
 
     render() {
-        const {coffeeType, milkType, photo, rating, comment, index, _id} = this.props
+        const {coffeeType, milkType, photo, rating, comment, index, _id} = this.props.theReview
+        // console.log(this.props)
         console.log(this.props)
         return(
 
             <div className="reviewCard">
-                        <p>Coffeetype{coffeeType} || milktype{milkType}</p>
-                        <p>Rating{rating}</p>
+                        <span className="CardTop">{coffeeType} {milkType}</span>
+                        <p>{rating}</p>
                         <img 
                         src={photo} 
                         className="reviewPhoto" 
