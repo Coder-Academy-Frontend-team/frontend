@@ -1,11 +1,14 @@
 import React from 'react'
 import '../styles/Review-card.scss';
+import { Link } from 'react-router-dom';
 
 class ReviewCard extends React.Component{
 
     render() {
-        const {coffeeType, milkType, photo, rating, comment, index} = this.props
+        const {coffeeType, milkType, photo, rating, comment, index, _id} = this.props
+        console.log(this.props)
         return(
+
             <div className="reviewCard">
                         <p>Coffeetype{coffeeType} || milktype{milkType}</p>
                         <p>Rating{rating}</p>
@@ -15,6 +18,7 @@ class ReviewCard extends React.Component{
                         title=" " 
                         alt=" " />
                         <aside>{comment}</aside>
+                        <Link to={`/coffeeprofile/${_id}`}> Open Review </Link>
                         </div>
                 )
                 }
