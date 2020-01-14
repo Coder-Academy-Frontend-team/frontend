@@ -11,7 +11,6 @@ require('dotenv').config();
 
 const googleApiKey = process.env.REACT_APP_GOOGLE_API_KEY;
 
-
 Geocode.setApiKey(googleApiKey);
 Geocode.setLanguage("en");
 
@@ -62,7 +61,7 @@ const changeCoordinates = (e) => {
   const cafesListDisplay = () => {
     let coffeeType = coffeeTypeSearch;
     if (coffeeType)
-{    axios.get('http://localhost:5550/coffee/' + coffeeType)
+{    axios.get(process.env.REACT_APP_BACKEND_URL + '/coffee/' + coffeeType)
     .then((res) => {
       setCafesList([...res.data])
     })
