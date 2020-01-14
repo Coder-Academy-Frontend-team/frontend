@@ -1,0 +1,15 @@
+.reviewCard{
+    height: 250px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid red;
+    
+    .reviewPhoto{
+        height: 100px;
+        width: 160px;
+        margin: 0 auto;
+        border: 1px solid black;
+    }
+}
