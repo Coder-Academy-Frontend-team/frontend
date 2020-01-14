@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+height: 100vh;
+}
+
+.searchResults {
+  height: 100vh;
+  overflow: scroll;
+}
+
+.map {
+  width: 50 vw;
+  height: auto;
+}
