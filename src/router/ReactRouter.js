@@ -9,7 +9,6 @@ import Register from '../pages/Register';
 import Search from '../pages/Search';
 import NotFoundPage from '../pages/NotFound';
 import ReviewForm from '../pages/ReviewForm'
-
 import SignupForm from './../components/SignupForm.js';
 
 const Router = () => {

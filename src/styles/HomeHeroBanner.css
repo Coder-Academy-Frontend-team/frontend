@@ -4,6 +4,7 @@
 * {
 	margin: 0px;
 	padding: 0px;
+	box-sizing: border-box;
 	font-family: 'Oswald', sans-serif;
 }
 body{
@@ -16,7 +17,7 @@ body{
 .header {
 	height: 95vh;
 	background-image: linear-gradient(to bottom, rgba(0, 10, 10, 0.5), rgba(43, 43, 43, 0.9)),
-		url(../assets/hero.png);
+		url(../assets/Hero.webp);
 	background-size: cover;
 	background-position: top;
 	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
