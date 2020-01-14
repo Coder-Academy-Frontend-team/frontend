@@ -10,7 +10,7 @@ import styles from "./Search.module.css";
 require('dotenv').config();
 
 const googleApiKey = process.env.REACT_APP_GOOGLE_API_KEY;
-console.log(googleApiKey);
+
 
 
 Geocode.setApiKey(googleApiKey);
@@ -63,7 +63,7 @@ const changeCoordinates = (e) => {
   const cafesListDisplay = () => {
     let coffeeType = coffeeTypeSearch;
     if (coffeeType)
-{    axios.get('http://localhost:5550/coffee/' + coffeeType)
+{    axios.get(process.env.REACT_APP_BACKEND_URL + '/coffee/' + coffeeType)
     .then((res) => {
       setCafesList([...res.data])
     })
