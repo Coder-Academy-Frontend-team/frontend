@@ -1,14 +1,12 @@
 import React from 'react';
 
-class CoffeeProfile extends React.Component {
-  render () {
+const CoffeeProfile = (props) => {
     return (
       <div>
         <p>Coffee Profile Page</p>
         <h1> Cafe Name </h1>
       </div>
     ) 
-  }
 };
 
 

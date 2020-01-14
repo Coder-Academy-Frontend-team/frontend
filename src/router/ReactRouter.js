@@ -8,6 +8,7 @@ import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Search from '../pages/Search';
 import NotFoundPage from '../pages/NotFound';
+import CoffeeProfile from '../pages/CoffeeProfile';
 
 
 const Router = () => {
@@ -21,6 +22,7 @@ const Router = () => {
                     <Route path="/register" component={Register} />
                     <Route path="/register" component={Register} />
                     <Route path="/search" component={Search} />
+                    <Route path="/coffeeprofile/:id" component={CoffeeProfile} />
                     
                     <Route component={NotFoundPage} />
                 </Switch>
