@@ -1,10 +1,11 @@
 .container {
   display: flex;
 height: 100vh;
+padding: 50px;
 }
 
 .searchResults {
-  height: 100vh;
+
   overflow: scroll;
 }
 

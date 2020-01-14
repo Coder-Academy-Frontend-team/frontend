@@ -7,19 +7,15 @@ import Router from '../router/ReactRouter';
 import Geocode from "react-geocode";
 import GoogleMap from "../components/GoogleMap.jsx";
 import styles from "./Search.module.css";
+require('dotenv').config();
 
-Geocode.setApiKey(process.env.GOOGLE_API_KEY);
+const googleApiKey = process.env.REACT_APP_GOOGLE_API_KEY;
+console.log(googleApiKey);
+
+
+Geocode.setApiKey(googleApiKey);
 Geocode.setLanguage("en");
 
-
-// var socket = net.connect({
-//   host: 'google.com',
-//   port: 80
-// });
-
-// socket.on('connect', function () {
-//   console.log('Connected to google.com!');
-// });
 
 const Search = ()  => {
 
@@ -45,7 +41,9 @@ const Search = ()  => {
           ...res.data
         ])
       // console.log(cafesList)
-
+      })
+      .catch((err) => {
+        console.log(err);
       })
   }, []);
 
@@ -55,8 +53,6 @@ const changeCoordinates = (e) => {
     .then(
     response => {
       const { lat, lng } = response.results[0].geometry.location;
-      // console.log(lat, lng);
-      // console.log({latitude: lat, longitude: lng})
       getCoordinates({latitude: lat, longitude: lng})
     },
     error => {
@@ -66,13 +62,19 @@ const changeCoordinates = (e) => {
 };
 
   const cafesListDisplay = () => {
+    let coffeeType = coffeeTypeSearch;
+    if (coffeeType)
+{    axios.get('http://localhost:5550/coffee/' + coffeeType)
+    .then((res) => {
+      setCafesList([...res.data])
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  }
 
   }
 
-  const ShowLocationOnMap = () => {
-
-
-  }
 
   return (
     <div className={styles.container}>
@@ -84,6 +86,7 @@ const changeCoordinates = (e) => {
           setCoffeeTypeSearch={setCoffeeTypeSearch}  
           displayMenu={displayMenu}
           setDisplayMenu={setDisplayMenu}
+
         />
         <input type="text" placeholder="cafe" defaultValue='' onChange={cafeSearchInput}></input>
         <button type="submit" onClick={cafesListDisplay}>Search</button>
