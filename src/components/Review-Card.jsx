@@ -15,17 +15,15 @@ class Review_Card extends React.Component{
         return
     }
     
-    
-    
     render() {
-        const { coffeeType, milkType, photo, rating, comment } = this.store
+        const { coffeeType, milkType, photo, rating, comment } = this.props
         return(
             <div className="reviewCard">
                 <h1>Title</h1>
-        <div>`Coffee: ${coffeeType} milk: ${this.store.milkType}`</div>
-                <div>{this.store.rating}</div>
-                <img src="#" className="reviewPhoto">Photo</img>
-                <aside>{this.store.comment}</aside>
+        <div>`Coffee: ${coffeeType} milk: ${milkType}`</div>
+                <div>{rating}</div>
+                <img src="#" className="reviewPhoto">{photo}</img>
+                <aside>{comment}</aside>
                 {/* {coffeeType}
                 
                 {milkType}
