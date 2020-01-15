@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import '../styles/Navbar.css'
 import logo from '../assets/logo.png'
-import SeacrhBar from './SearchBar';
+import SearchBar from './SearchBar';
 const Navbar = () => {
   return (
     <nav>
