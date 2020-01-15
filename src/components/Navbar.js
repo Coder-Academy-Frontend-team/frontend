@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import '../styles/Navbar.css'
 import SearchBar from './SearchBar'
 import logo from '../assets/logo.png'
-import SearchBar from './SearchBar';
+
 const Navbar = () => {
   return (
     <nav>
