@@ -63,19 +63,23 @@ const changeCoordinates = (e) => {
     let cafeName = cafeSearch;
     console.log(coffeeType)
     if (coffeeType !== (null || '') ) {    
-      axios.get(process.env.REACT_APP_BACKEND_URL + '/coffee/' + coffeeType)
+      axios.get(process.env.REACT_APP_BACKEND_URL + '/search/coffee/' + coffeeType)
           .then((res) => {
-      setCafesList([...res.data])
+            const {cafe } = res.data[0]
+            console.log(cafe)
+      setCafesList([cafe])
     })
     .catch((err) => {
       console.log(err);
     })
   } 
-
   if (cafeName !== (null || '') ) {
-    axios.get(process.env.REACT_APP_BACKEND_URL + '/cafe/' + cafeName)
+    axios.get(process.env.REACT_APP_BACKEND_URL + '/search/cafe/' + cafeName)
     .then((res) => {
-      setCafesList([...res.data])
+      // console.log(res)
+      const {cafe} = res.data
+      console.log(cafe)
+      setCafesList([cafe])
     })
     .catch((err) => {
       console.log(err);
