@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import '../styles/Navbar.css'
+import SearchBar from './SearchBar'
 import logo from '../assets/logo.png'
 
 const Navbar = () => {
@@ -13,6 +14,7 @@ const Navbar = () => {
             <img src={logo} alt='logo' className='logo'/>
           </NavLink>
         </div>
+          <SearchBar className='search-bar'/>
         <div>
           <NavLink activeClassName="is-active" exact={true} to="/login" className='individual-link'>Login</NavLink>
           <NavLink activeClassName="is-active" to="/search" className='individual-link'>Search</NavLink>

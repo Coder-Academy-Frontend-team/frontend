@@ -30,7 +30,6 @@ const Router = () => {
                     <Route path="/show" component={CafeShowPage} />
                     <Route component={NotFoundPage} />
                 </Switch>
-                <SearchBar />
             </BrowserRouter>
         </div>
     )
