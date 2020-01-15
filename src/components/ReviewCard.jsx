@@ -5,13 +5,11 @@ import { Link } from 'react-router-dom';
 class ReviewCard extends React.Component{
 
     render() {
-        const {coffeeType, milkType, photo, rating, comment, index, _id} = this.props.theReview
-        // console.log(this.props)
+        const {coffeeType, milkType, photo, rating, comment, index, _id, createdAt} = this.props.theReview
         console.log(this.props)
         return(
-
             <div className="reviewCard">
-                        <span className="CardTop">{coffeeType} {milkType}</span>
+                        <span className="cardTop">{coffeeType} {milkType}</span>
                         <p>{rating}</p>
                         <img 
                         src={photo} 
@@ -20,6 +18,7 @@ class ReviewCard extends React.Component{
                         alt=" " />
                         <aside>{comment}</aside>
                         <Link to={`/coffeeprofile/${_id}`}> Open Review </Link>
+                        <p>{createdAt}</p>
                         </div>
                 )
                 }

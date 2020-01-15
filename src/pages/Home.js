@@ -25,17 +25,12 @@ const Home = () => {
     <>
         <HomeHeroBanner />
         <h1>Latest Reviews</h1>
-        <div>
+        <div className="reviewBar">
         {reviews.map((review) => {
           const theReview = review.review
           return (
-            <div className="reviewBar">
-              {/* <Link to={`/coffeeprofile/${review.__id}`}> </Link>
-              <p>{review.createdAt}</p>
-              <p>{review.rating}</p>
-              <p>{review.comment}</p> */}
+            <div >
               <ReviewCard theReview={theReview}/>
-              {/* cafe name, location, username */}
             </div>
           )
         })}

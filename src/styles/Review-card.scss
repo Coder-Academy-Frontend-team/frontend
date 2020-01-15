@@ -1,23 +1,36 @@
-.reviewCard{
-    background: rgba(255,255,255,.8);
+.reviewBar{
     height: 250px;
-    width: 200px;
+    margin: 0 auto;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    border: 1px solid red;
-    border-radius: 25px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45), 
-            -5px -5px 5px rgba(255, 255, 255, 0.45);
-    
-    .reviewPhoto{
-        background: url(https://source.unsplash.com/random);
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100px;
-        width: 160px;
-        margin: 0 auto;
-        border: 1px solid black;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: url('../assets/ReviewBackground.svg');
+
+    .reviewCard{
+        background: rgba(255,255,255,.8);
+        height: 250px;
+        width: 200px;
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 25px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45), 
+                -5px -5px 5px rgba(255, 255, 255, 0.45);
+        .cardTop{
+            display: flex;
+            flex-direction: row;
+
+        }
+        .reviewPhoto{
+            background: url(https://source.unsplash.com/random);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100px;
+            width: 160px;
+            margin: 0 auto;
+        }
     }
 }
