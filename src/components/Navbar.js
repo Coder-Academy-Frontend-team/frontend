@@ -14,7 +14,7 @@ const Navbar = () => {
             <img src={logo} alt='logo' className='logo'/>
           </NavLink>
         </div>
-          <SearchBar className='search-bar'/>
+          <SearchBar />
         <div>
           <NavLink activeClassName="is-active" exact={true} to="/login" className='individual-link'>Login</NavLink>
           <NavLink activeClassName="is-active" to="/search" className='individual-link'>Search</NavLink>
