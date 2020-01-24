@@ -11,7 +11,7 @@ class CoffeeTypeDropdown extends React.Component {
   //   displayMenu: false
   // }
 
-  showDropDownMenu = (e) => {
+  showDropDownMenu = e => {
     e.preventDefault();
     // this.setState({displayMenu: true}, () => {
     //   document.addEventListener('click', this.hideDropDownMenu);
@@ -19,61 +19,62 @@ class CoffeeTypeDropdown extends React.Component {
 
     this.props.setDisplayMenu(true);
     const callThis = () => {
-        document.addEventListener('click', this.hideDropDownMenu);
-      }
+      document.addEventListener("click", this.hideDropDownMenu);
+    };
     callThis();
-  }
+  };
 
-  hideDropDownMenu = (e) => {
+  hideDropDownMenu = e => {
     // this.setState({displayMenu:false}, () => {
     //   document.removeEventListener('click', this.hideDropDownMenu);
     // });
 
     this.props.setDisplayMenu(false);
     const callThis = () => {
-        document.removeEventListener('click', this.hideDropDownMenu);
-    }
+      document.removeEventListener("click", this.hideDropDownMenu);
+    };
     callThis();
-  }
+  };
 
-  getCoffeeType = (e) => {
-    console.log(e.currentTarget.getAttribute("value"))
+  getCoffeeType = e => {
+    console.log(e.currentTarget.getAttribute("value"));
     // this.setState({coffeeTypeSearch: e.currentTarget.getAttribute("value")});
     this.props.setCoffeeTypeSearch(e.currentTarget.getAttribute("value"));
-  }
+  };
 
-  listCoffeeType = () => {
-
-  }
+  listCoffeeType = () => {};
 
   renderDropDown() {
-    return(
+    return (
       <div className={styles.dropdown}>
-        <div className={styles.button} onClick={this.showDropDownMenu}>{this.props.coffeeTypeSearch}</div>
+        <div className={styles.button} onClick={this.showDropDownMenu}>
+          {this.props.coffeeTypeSearch}
+        </div>
         {this.props.displayMenu ? (
           <ul>
-            <li onClick={this.getCoffeeType}value="Cappucino">Cappuccino</li>
-            <li onClick={this.getCoffeeType}value="Latte">Latte</li>
-            <li onClick={this.getCoffeeType}value="Espresso">Espresso</li>
-            <li onClick={this.getCoffeeType}value="Macchiato">Macchiatto</li>
-            <li onClick={this.getCoffeeType}value="Americano">Americano</li>
+            <li onClick={this.getCoffeeType} value="Cappucino">
+              Cappuccino
+            </li>
+            <li onClick={this.getCoffeeType} value="Latte">
+              Latte
+            </li>
+            <li onClick={this.getCoffeeType} value="Espresso">
+              Espresso
+            </li>
+            <li onClick={this.getCoffeeType} value="Macchiato">
+              Macchiatto
+            </li>
+            <li onClick={this.getCoffeeType} value="Americano">
+              Americano
+            </li>
           </ul>
-        ) : 
-        (
-          null
-        )}
+        ) : null}
       </div>
     );
-  } 
-
+  }
 
   render() {
-    return (
-      this.renderDropDown()
-    )
-
-    
-    
+    return this.renderDropDown();
   }
 }
 
