@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "axios": "^0.19.1",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "frontend": "^2.0.0-alpha.4",
     "google-maps-react": "^2.0.2",
